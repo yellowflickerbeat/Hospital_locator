@@ -101,3 +101,9 @@ if (navigator.geolocation) {
 } else {
     alert("Geolocation is not supported by this browser.");
 }
+document.getElementById('toggle-sidebar').addEventListener('click', function () {
+    const sidebar = document.getElementById('sidebar');
+    sidebar.classList.toggle('active'); // Toggle the "active" class
+});
+
+

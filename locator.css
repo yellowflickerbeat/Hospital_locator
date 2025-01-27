@@ -113,3 +113,60 @@ transition: background-color 0.3s;
 button#home-button:hover {
 background-color: #1976D2;
 }
+/* Minimized sidebar option for mobile */
+#sidebar {
+    width: 300px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    border-right: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth transition for sliding */
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateX(-100%); /* Initially hidden */
+    z-index: 1000;
+}
+
+#sidebar.active {
+    transform: translateX(0); /* Slide in when active */
+}
+
+#map {
+    flex: 1;
+    height: 100%;
+}
+
+.nav-links {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 12px;
+    z-index: 1100;
+}
+
+.toggle-sidebar {
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.toggle-sidebar:hover {
+    background-color: #1976D2;
+}
+
+@media (max-width: 768px) {
+    /* Mobile-specific styles */
+    #sidebar {
+        width: 100%;
+    }
+}
